@@ -19,7 +19,7 @@
     ansible.builtin.get_url:
       url: https://roboshop-builds.s3.amazonaws.com/web.zip
       dest: /tmp
- - name: Extract application
+  - name: Extract application
     ansible.builtin.unarchive:
       src: /tmp/web.zip
       dest: /usr/share/nginx/html
@@ -34,4 +34,4 @@
     ansible.builtin.service:
       name: nginx
       state: restarted
-      enabled: yes    
+      enabled: yes
